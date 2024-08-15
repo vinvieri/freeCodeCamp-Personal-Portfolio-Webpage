@@ -1,0 +1,269 @@
+:root {
+  --white: #fafafa;
+  --dark-green: #052322;
+  --medium-green: #0c4e43;
+  --light-green: #d0ff71;
+  --gray-green: #edf3f1;
+  --neon-green: #d2f90e;
+  --orange: #e03c1a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark-green);
+  background-color: var(--gray-green);
+}
+
+section {
+  scroll-margin-top: 9.6rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  text-align: center;
+}
+
+/* NAVBAR */
+#navbar {
+  background-color: var(--dark-green);
+  padding: 2.4rem 4.8rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(5, 35, 34, 0.15);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-list {
+  list-style: none;
+
+  display: flex;
+  gap: 8rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  font-size: 2.4rem;
+  color: var(--white);
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid transparent;
+  transition: all 0.4s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: var(--neon-green);
+  border-bottom-color: currentColor;
+}
+
+/* WELCOME */
+#welcome-section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.welcome-container {
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 7.4em;
+  margin-bottom: 1.6rem;
+}
+
+.welcome-description {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+/* PROJECTS */
+#projects {
+  background-color: var(--medium-green);
+  color: var(--white);
+  margin: 0 8rem;
+  padding: 9.6rem 4.8rem;
+  border-radius: 1.2rem;
+}
+
+#projects .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.project-heading {
+  font-size: 4.4rem;
+  color: var(--light-green);
+  margin-bottom: 6.4rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 4.8rem;
+}
+
+.project-tile:link,
+.project-tile:visited {
+  font-size: 2rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.project-tile:hover {
+  transform: scale(1.02);
+}
+
+.project-img {
+  width: 100%;
+  display: block;
+}
+
+.project-tile p {
+  background-color: var(--dark-green);
+  padding: 2.4rem 0;
+}
+
+.bracket {
+  color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.project-tile:hover .bracket {
+  color: var(--neon-green);
+}
+
+/* PROFILE LINK */
+#profile {
+  min-height: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-heading {
+  font-size: 6.2em;
+  margin-bottom: 1.6rem;
+}
+
+.profile-description {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--orange);
+  margin-bottom: 8rem;
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.social-links:link,
+.social-links:visited {
+  font-size: 3rem;
+  color: var(--dark-green);
+  text-decoration: none;
+
+  transition: all 0.4s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-links:hover {
+  color: var(--orange);
+}
+
+.social-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 105em) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 80em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media (max-width: 40em) {
+  html {
+    font-size: 37.5%;
+  }
+
+  header {
+    padding: 3.2rem 6.4rem;
+  }
+
+  #projects {
+    padding: 4.8rem;
+    margin: 0 3.2rem;
+  }
+
+  .project-heading {
+    font-size: 5.2rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-heading {
+    font-size: 5.2rem;
+  }
+
+  .profile-description {
+    font-size: 2rem;
+  }
+
+  .social-links-container {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+}
