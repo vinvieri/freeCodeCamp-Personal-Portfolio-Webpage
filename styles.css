@@ -43,7 +43,6 @@ section {
 
   display: flex;
   justify-content: center;
-  align-items: center;
 
   width: 100%;
   position: fixed;
@@ -55,7 +54,7 @@ section {
   list-style: none;
 
   display: flex;
-  gap: 8rem;
+  gap: 12rem;
 }
 
 .nav-link:link,
@@ -237,7 +236,7 @@ h1 {
     font-size: 37.5%;
   }
 
-  header {
+  #navbar {
     padding: 3.2rem 6.4rem;
   }
 
