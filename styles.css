@@ -159,6 +159,7 @@ h1 {
 /* PROFILE LINK */
 #profile {
   min-height: 50vh;
+  padding: 9.6rem;
 
   display: flex;
   justify-content: center;
